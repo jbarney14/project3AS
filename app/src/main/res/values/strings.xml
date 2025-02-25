@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Project 3</string>
+    <string name="enter_label">Enter a number 1-25</string>
+    <string name="button_label">SET SHIFT</string>
+    <string name="bad_input">NUMBER MUST BE BETWEEN 1 AND 25</string>
 </resources>
