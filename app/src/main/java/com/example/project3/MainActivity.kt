@@ -15,10 +15,14 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var encrypter : Encryption
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        encrypter = Encryption()
         val enterLabel = findViewById<TextView>(R.id.enter_label)
         val userInput = findViewById<EditText>(R.id.enter_box)
         val badInputText = findViewById<TextView>(R.id.bad_input_msg)
@@ -50,11 +54,14 @@ class MainActivity : AppCompatActivity() {
 
 
         button.setOnClickListener(){
-            val input = userInput.text.toString()
-            if(input.toInt() < 0 || input.toInt() > 25) {
+
+            var input = userInput.text.toString().toInt()
+            //Log.w("MainActivity", "$input")
+            if(input < 0 || input > 25) {
                 badInputText.visibility = View.VISIBLE
             } else {
-
+                encrypter.setShiftInput(input)
+                Log.w("MainActivity", "${encrypter.getShift()}")
             }
         }
 
