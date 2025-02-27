@@ -3,4 +3,8 @@
     <string name="enter_label">Enter a number 1-25</string>
     <string name="button_label">SET SHIFT</string>
     <string name="bad_input">NUMBER MUST BE BETWEEN 1 AND 25</string>
+
+    <string name="result_filler">Result of encryption</string>
+    <string name="encrypt_label">ENCRYPT</string>
+    <string name="go_back_label">GO_BACK</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.project3
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -16,7 +17,11 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var encrypter : Encryption
+    companion object {
+        lateinit var encrypter: Encryption
+    }
+
+    //private lateinit var encrypter : Encryption
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,7 +69,9 @@ class MainActivity : AppCompatActivity() {
                 Log.w("MainActivity", "${encrypter.getShift()}")
             }
         }
-
-
+    }
+    fun modifyData() {
+        var intent = Intent(this, EncryptActivity::class.java)
+        startActivity(intent)
     }
 }
