@@ -1,5 +1,6 @@
 package com.example.project3
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -17,6 +18,10 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
 
     private lateinit var encrypter : Encryption
+
+    companion object {
+        var shiftNum : Int =  0
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             override fun onTextChanged(charSequence: CharSequence, start: Int, before: Int, count: Int) {
                 //once user types make textview disappear and center text
                 if (charSequence.length > 0) {
-                    enterLabel.visibility = View.GONE
+                    enterLabel.visibility = View.INVISIBLE
                     userInput.gravity = Gravity.CENTER
                 } else {
                     enterLabel.visibility = View.VISIBLE
@@ -55,16 +60,21 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener(){
 
-            var input = userInput.text.toString().toInt()
+            val input = userInput.text.toString().toInt()
             //Log.w("MainActivity", "$input")
             if(input < 0 || input > 25) {
                 badInputText.visibility = View.VISIBLE
             } else {
+               // badInputText.visibility = View.INVISIBLE
+                   val intent : Intent = Intent(this, EncryptActivity::class.java)
+                   startActivity(intent)
+
                 encrypter.setShiftInput(input)
                 Log.w("MainActivity", "${encrypter.getShift()}")
             }
         }
 
+        shiftNum = userInput.toString().toIntOrNull() ?: 0  //set global for EncryptActivity
 
     }
 }

@@ -10,19 +10,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/enter_label"
+        android:text="@string/encrypt_enter_label"
         android:textColor="@color/gray"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/enter_label"
         android:background="@android:color/transparent"
-         />
+        />
 
     <EditText
         android:layout_width="367dp"
         android:layout_height="50dp"
         android:textColor="@color/black"
-        android:inputType="number"
+        android:inputType="text"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/enter_box"
@@ -40,26 +40,46 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignTop="@id/line"
-        android:layout_alignBottom="@id/button"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="150dp"
-        android:text="@string/bad_input"
-        android:gravity="center"
-        android:visibility="invisible"
-        android:id="@+id/bad_input_msg"
+        android:layout_height="wrap_content"
+        android:text="@string/shift_equals"
+        android:textColor="@color/black"
+        android:layout_alignTop="@id/encrypt_button"
+        android:layout_marginTop="-300dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/shift_equals"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/encrypt_answer"
+        android:textColor="@color/black"
+        android:layout_alignTop="@id/encrypt_button"
+        android:layout_marginTop="-150dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/shifted"
         />
 
     <Button
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:text="@string/button_label"
+        android:text="@string/encrypt_button"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:id="@+id/button"
+        android:layout_marginTop="550dp"
+        android:id="@+id/encrypt_button"
         >
-
     </Button>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="@string/finish_button"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/encrypt_button"
+        android:layout_marginTop="25dp"
+        android:id="@+id/back_button"
+        >
+    </Button>
+
 
 </RelativeLayout>

@@ -3,4 +3,9 @@
     <string name="enter_label">Enter a number 1-25</string>
     <string name="button_label">SET SHIFT</string>
     <string name="bad_input">NUMBER MUST BE BETWEEN 1 AND 25</string>
+    <string name="encrypt_enter_label">Enter word to shift</string>
+    <string name="shift_equals">Shift =</string>
+    <string name="encrypt_answer">FILL!</string>
+    <string name="encrypt_button">ENCRYPT</string>
+    <string name="finish_button">GO BACK</string>
 </resources>
