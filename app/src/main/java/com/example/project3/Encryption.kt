@@ -21,7 +21,6 @@ class Encryption {
     }
 
 
-
     fun encrypt(shift: Int, str: String) : String {
         var index = 0
         var result = ""

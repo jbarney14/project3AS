@@ -7,5 +7,26 @@
 
     </style>
 
-    <style name="Theme.Project3" parent="Base.Theme.Project3" />
+    <style name="Theme.Project3" parent="Base.Theme.Project3"
+        />
+
+    <style name="GeneralStyle" parent="Base.Theme.Project3">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">42sp</item>
+    </style>
+
+    <style name="LabelStyle" parent="GeneralStyle">
+
+        <item name="android:layout_width">370dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:textSize">42sp</item>
+        <item name="android:textColor">black</item>
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center</item>
+
+
+        </style>
+
+    <style name="ButtonStyle" parent="GeneralStyle"/>
 </resources>

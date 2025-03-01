@@ -22,13 +22,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     //private lateinit var encrypter : Encryption
+    private lateinit var enterLabel : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         encrypter = Encryption()
-        val enterLabel = findViewById<TextView>(R.id.enter_label)
+        enterLabel = findViewById<TextView>(R.id.enter_label)
         val userInput = findViewById<EditText>(R.id.enter_box)
         val badInputText = findViewById<TextView>(R.id.bad_input_msg)
         val button = findViewById<Button>(R.id.button)
@@ -67,11 +68,26 @@ class MainActivity : AppCompatActivity() {
             } else {
                 encrypter.setShiftInput(input)
                 Log.w("MainActivity", "${encrypter.getShift()}")
+                /*val word = MainActivity.encrypter.encrypt(input, "HELLO")
+                Log.w("MainActivity", "$word")
+
+                 */
+
+                modifyData()
             }
         }
     }
+
     fun modifyData() {
         var intent = Intent(this, EncryptActivity::class.java)
         startActivity(intent)
+    }
+
+    // Modify page, when we come back to this page, we have to show the id:enter_label
+    // Also maybe get rid of the text in the Edit
+    override fun onResume() {
+        super.onResume()
+
+        enterLabel.text = MainActivity.encrypter.getShift().toString()
     }
 }
