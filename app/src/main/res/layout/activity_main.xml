@@ -37,7 +37,6 @@
         android:layout_alignBottom="@id/enter_box"
         android:background="@color/light_blue"
         android:id="@+id/line"
-
         />
 
     <TextView
