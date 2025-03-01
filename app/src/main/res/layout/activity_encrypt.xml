@@ -9,15 +9,14 @@
 
 
 
+
     <EditText
         style="@style/LabelStyle"
         android:textColor="@color/black"
         android:text="-"
         android:inputType="text"
         android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
         android:id="@+id/enter_string"
-        android:background="@android:color/transparent"
         />
 
     <View
@@ -27,54 +26,42 @@
         android:layout_alignBottom="@id/enter_string"
         android:background="@color/light_blue"
         android:id="@+id/underline"
-
         />
 
 
     <TextView
         style="@style/LabelStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text=""
         android:textColor="@color/black"
-        android:layout_marginTop="200dp"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/enter_string"
         android:id="@+id/shift_label"
-        android:background="@android:color/transparent"
         />
 
     <TextView
-
+        style="@style/LabelStyle"
         android:id="@+id/encryption_result"
-        android:layout_width="370dp"
-        android:layout_height="70dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="200dp"
-        android:background="@android:color/transparent"
         android:text="@string/result_filler"
+        android:layout_below="@+id/shift_label"
         android:textColor="@color/black" />
 
     <Button
-        android:layout_width="250dp"
-        android:layout_height="100dp"
+        style="@style/ButtonStyle"
+
         android:text="@string/encrypt_label"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
         android:layout_below="@+id/encryption_result"
         android:id="@+id/encryptButton"
-        >
-    </Button>
+
+        />
+
     <Button
-        android:layout_width="250dp"
-        android:layout_height="100dp"
-        android:text="@string/go_back_label"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/encryptButton"
+        style="@style/ButtonStyle"
         android:id="@+id/goBackButton"
-        >
-    </Button>
+        android:layout_below="@+id/encryptButton"
+        android:layout_centerInParent="true"
+        android:text="@string/go_back_label"
+         />
 
 
 

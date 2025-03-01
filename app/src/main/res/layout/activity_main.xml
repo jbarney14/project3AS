@@ -8,15 +8,13 @@
     tools:context=".MainActivity">
 
     <TextView
-        style="@style/GeneralStyle"
+        style="@style/LabelStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/enter_label"
         android:textColor="@color/gray"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
         android:id="@+id/enter_label"
-        android:background="@android:color/transparent"
          />
 
     <EditText
@@ -40,6 +38,7 @@
         />
 
     <TextView
+        style="@style/LabelStyle"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_alignTop="@id/line"
@@ -47,16 +46,13 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="150dp"
         android:text="@string/bad_input"
-        android:gravity="center"
         android:visibility="invisible"
         android:id="@+id/bad_input_msg"
         />
 
     <Button
-        android:layout_width="250dp"
-        android:layout_height="100dp"
+        style="@style/ButtonStyle"
         android:text="@string/button_label"
-        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:id="@+id/button"
         >

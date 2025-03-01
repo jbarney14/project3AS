@@ -10,23 +10,24 @@
     <style name="Theme.Project3" parent="Base.Theme.Project3"
         />
 
-    <style name="GeneralStyle" parent="Base.Theme.Project3">
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:textSize">42sp</item>
-    </style>
-
-    <style name="LabelStyle" parent="GeneralStyle">
-
+    <style name="LabelStyle" parent="Base.Theme.Project3">
         <item name="android:layout_width">370dp</item>
         <item name="android:layout_height">70dp</item>
-        <item name="android:textSize">42sp</item>
-        <item name="android:textColor">black</item>
-        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:textSize">38sp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:layout_marginTop">80dp</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:gravity">center</item>
+        <item name="android:background">#0000</item>
+    </style>
 
-
-        </style>
-
-    <style name="ButtonStyle" parent="GeneralStyle"/>
+    <style name="ButtonStyle" parent="LabelStyle">
+        <item name="android:textSize">42sp</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:background">#800095</item>
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+       </style>
 </resources>
