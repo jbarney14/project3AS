@@ -6,5 +6,5 @@
 
     <string name="result_filler">Result of encryption</string>
     <string name="encrypt_label">ENCRYPT</string>
-    <string name="go_back_label">GO_BACK</string>
+    <string name="go_back_label">GO BACK</string>
 </resources>

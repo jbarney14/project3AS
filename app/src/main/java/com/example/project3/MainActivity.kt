@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     //private lateinit var encrypter : Encryption
     private lateinit var enterLabel : TextView
 
+    var firstTime = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         val userInput = findViewById<EditText>(R.id.enter_box)
         val badInputText = findViewById<TextView>(R.id.bad_input_msg)
         val button = findViewById<Button>(R.id.button)
+
 
 
         //researched how to implement TextChangedListener to hide text box upon user input
@@ -61,6 +64,8 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener(){
 
+            firstTime = false //checks if first time (pre-encrypted) to display first sentence
+
             var input = userInput.text.toString().toInt()
             //Log.w("MainActivity", "$input")
             if(input < 0 || input > 25) {
@@ -88,6 +93,9 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        enterLabel.text = MainActivity.encrypter.getShift().toString()
+        if(firstTime == false) {
+
+            enterLabel.text = MainActivity.encrypter.getShift().toString()
+        }
     }
 }
